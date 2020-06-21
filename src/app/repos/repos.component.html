@@ -1,27 +1,17 @@
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>GittY</h1>
-        </div>
-        <div class="col-md-4 search-area">
-            <input class="search form-control mr-sm-2" type="text" placeholder="Input Github Username">    
-        </div>
-    </div>
-    <button class="d-inline">Profile</button>
-    <button class="d-inline">Repos</button>
-</div>
-<div *ngIf="repo">
+<div *ngIf="repos">
     <div class="container ">
-        <div class="heading">
+        <div>
             <h1>Repositories<span class="icon btn-success">{{user.public_repos}}</span> </h1>
             <hr>
         </div>
-        <div class="area" *ngFor = "let repo of repos">
-            <blockquote  class="repo">
-                <h5></h5>{{repo.name}} <span *ngIf="repo.homepage"><a href="{{repo.homepage}}">Live Site</a></span></h5>
-                <p>{{repo.description}}<span><a href="{{repo.html_url}}">View page here </a></span></p>
-                <hr>
-            </blockquote>
+        <div class="repos-field">
+            <div class="area" *ngFor = "let repo of repos">
+                <blockquote class="repo">
+                    <h4 class="heading">{{repo.name}} <span *ngIf="repo.homepage"><a href="{{repo.homepage}}">Live Site</a></span></h4>
+                    <p>{{repo.description}}<span *ngIf="repo.description"><a href="{{repo.html_url}}">View page here </a></span></p>
+                    <hr>
+                </blockquote>
+            </div>
         </div>
     </div>
 </div>
