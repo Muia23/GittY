@@ -19,4 +19,7 @@ export class UserService {
     return this.http.get("https://api.github.com/users/" + this.username + "?" + this.apikey +".json");
   }
 
+  getUserRepo(){
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos?" + this.apikey +".json");  
+  }
 }
