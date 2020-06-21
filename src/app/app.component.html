@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+    
+    </head>
     <body>
         <div class="jumbotron">
             <div class="row">
                 <div class="col-md-8">
-                    <h1>GittY</h1>
+                    <a routerLink="user"><h1>GittY</h1></a>
                 </div>
                 <div class="col-md-4 search-area">
-                    <input class="search form-control mr-sm-2" type="text" placeholder="Input Github Username">    
+                    <input class="search form-control mr-sm-2" type="text" placeholder="Input Github Username" [(ngModel)]="username" name="username"(keyup)="findUser()">    
                 </div>
-            </div>
-            <div class="navigation">
-                <a class="nav-item nav-link active d-inline">Profile</a>
-                <a class="nav-item nav-link d-inline">Repos</a>
-            </div>
+            </div>        
+            <nav class="navbar navbar-expand-lg">
+                <a class="nav-item nav-link active" routerLink="user" routerLinkActive='active'>Profile<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" routerLink="repo" routerLinkActive='active'>Repos</a>
+            </nav>
         </div>
-
+        
         <router-outlet></router-outlet>
     </body>
 </html>
