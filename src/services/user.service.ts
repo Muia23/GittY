@@ -15,4 +15,8 @@ export class UserService {
     this.apikey='aec24ccb4434c857d8600e85ce8ab37794292593';
   }
 
+  getUserData(){
+    return this.http.get("https://api.github.com/users/" + this.username + "?" + this.apikey +".json");
+  }
+
 }
