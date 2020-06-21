@@ -1,0 +1,67 @@
+.search-area {
+    padding-right: 40px;
+}
+.search{
+    margin-right: 3px;
+}
+.user-icon {
+    min-width: 450px;
+    border-style: dotted;
+    border-color: blue;
+}
+.icon{
+    margin-left: 75px;
+    margin-right: 75px;
+    border-radius: 50%;
+}
+
+.user-details{
+    padding: 30px;
+    border-style: double;
+    border-color: brown;
+    text-align: center;
+}
+.user-details h2 {
+    display: inline;
+    font-size: 50px;
+}
+.user-details h4 {
+    display: inline;
+    font-size: 30px;
+    padding-left: 60px;
+}
+.user-details h5{
+    display: inline;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.follows-area {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.repos-area {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: inline;
+}
+
+.bio-area {
+    padding-top: 15px;
+}
+
+.bio {
+    float:left;
+}
+.heading{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+.area {
+    padding-left: 50px;
+    padding-right: 80px;
+}
+.icon {
+    border-radius: 50%;
+}
