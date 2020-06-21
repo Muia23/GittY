@@ -1,0 +1,22 @@
+.repos-field {
+    height: 53vh;
+    overflow-y: scroll;
+}
+.repo {
+    padding: 0px 40px;
+}
+.heading {
+    padding-left: 30px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+	width: 3px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #000000;
+    border: 2px solid #555555;
+}
