@@ -19,6 +19,7 @@ export class UserService {
     this.user =new User("","","","","","","","","","",);
   }
 
+  
  updateUser(username){
     this.username = username;
     this.userRequest()
@@ -40,7 +41,7 @@ export class UserService {
       email:string;
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(environment.apiURL+this.username+environment.apiKey).toPromise()
+      this.http.get<ApiResponse>("https://api.github.com/users/"+this.username+"?655ef8416767c9dc64cc6d7d3a6570e6d79c498e.json").toPromise()
           .then((response)=>{          
             console.log(response);                    
             this.user.username = response.login          
