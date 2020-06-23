@@ -2,8 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
+
 export const environment = {
-  production: false
+  production: false,
+  apiURL: "https://api.github.com/users/",
+  apiKey:"?655ef8416767c9dc64cc6d7d3a6570e6d79c498e.json",
 };
 
 /*
