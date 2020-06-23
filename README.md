@@ -1,27 +1,32 @@
 # GittY
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+ [muia23](https://github.com/Muia23)
 
-## Development server
+## Project description
+This is Angular application for users to search for github users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project setup instruction
+The application is con be viewed using any local browser.
+Here is a link to the live site()
+## License info
+MIT License
 
-## Code scaffolding
+Copyright (c) 2020 Muia23
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this Application and associated documentation files, to deal
+in the Application without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Application, and to permit persons to whom the Application is
+furnished to do so, subject to the following conditions:
 
-## Build
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+THE APPLICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE APPLICATION OR THE USE OR OTHER DEALINGS WITH THE
+APPLICATION.
