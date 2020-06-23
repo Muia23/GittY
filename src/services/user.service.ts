@@ -19,13 +19,10 @@ export class UserService {
     this.user =new User("","","","","","","","","","",);
   }
 
-  
  updateUser(username){
     this.username = username;
     this.userRequest()
   }
-
-  
 
   userRequest(){
     interface ApiResponse {
@@ -41,7 +38,7 @@ export class UserService {
       email:string;
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>("https://api.github.com/users/"+this.username+"?655ef8416767c9dc64cc6d7d3a6570e6d79c498e.json").toPromise()
+      this.http.get<ApiResponse>(environment.apiURL+this.username+environment.apiKey).toPromise()
           .then((response)=>{          
             console.log(response);                    
             this.user.username = response.login          
@@ -64,49 +61,6 @@ export class UserService {
         })
         return promise
   }
+
 }
     
-  /*search(term:string){
-      let promise = new Promise((resolve, reject) => {
-        
-        this.http.get(apiURL)
-            .toPromise()
-            .then(
-              res => {                             
-                this.User = res;
-                console.log (this.User);
-                return this.User;
-                resolve();
-              },
-              msg => {
-                reject();
-              }
-            )
-      });
-      return promise;
-
-    }
-
-    
-
-  /*private username:string;
-  private apikey:string;
-  
-  constructor(private http:HttpClient) { 
-    console.log("service is ready!");
-    
-    this.apikey='aec24ccb4434c857d8600e85ce8ab37794292593';
-  }
-
-  getUserData(){
-    return this.http.get("https://api.github.com/users/" + this.username + "?" + this.apikey +".json");
-  }
-
-  getUserRepo(){
-    return this.http.get("https://api.github.com/users/" + this.username + "/repos?" + this.apikey +".json");  
-  }
-
-  updateUser(username:string){
-      this.username=username;
-  }*/
-
