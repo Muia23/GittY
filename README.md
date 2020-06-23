@@ -7,7 +7,7 @@ This is Angular application for users to search for github users.
 
 ## Project setup instruction
 The application is con be viewed using any local browser.
-Here is a link to the live site()
+Here is a link to the live site(https://muia23.github.io/GittY/)
 ## License info
 MIT License
 
