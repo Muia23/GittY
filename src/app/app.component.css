@@ -1,3 +1,10 @@
+.jumbotron {
+    background-image: url("https://media2.giphy.com/media/l41lTDTwmpN2BdtWo/giphy.gif?cid=ecf05e477a2663453b5376e2bf3aeaa2f3971901fe256b87&rid=giphy.gif");
+    background-size: 300px 300px;
+    background-color: black;
+    
+    
+}
 .search-area {
     padding-right: 40px;
 }

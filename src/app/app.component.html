@@ -9,7 +9,7 @@
                 <div class="col-md-8">
                     <a routerLink="user"><h1>GittY</h1></a>
                 </div>
-                <div class="col-md-4 search-area">
+                <div class="col-md-4 search-area">            
                     <input class="search form-control mr-sm-2" type="text" placeholder="Input Github Username" [(ngModel)]="username" name="username"(keyup)="findUser()">    
                 </div>
             </div>        
@@ -17,8 +17,8 @@
                 <a class="nav-item nav-link active" routerLink="user" routerLinkActive='active'>Profile<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" routerLink="repo" routerLinkActive='active'>Repos</a>
             </nav>
+            
         </div>
-        
         <router-outlet></router-outlet>
     </body>
 </html>
