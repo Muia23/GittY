@@ -1,14 +1,14 @@
-<div *ngIf="repos">
+<div *ngIf="repo.name">
     <div class="container ">
         <div>
-            <h1>Repositories<span class="icon btn-success">{{user.public_repos}}</span> </h1>
+            <h1>Repositories <sup class="icon btn-success">--</sup> </h1>
             <hr>
         </div>
         <div class="repos-field">
-            <div class="area" *ngFor = "let repo of repos">
-                <blockquote class="repo">
-                    <h4 class="heading">{{repo.name}} <span *ngIf="repo.homepage"><a href="{{repo.homepage}}">Live Site</a></span></h4>
-                    <p>{{repo.description}}<span *ngIf="repo.description"><a href="{{repo.html_url}}">View page here </a></span></p>
+            <div class="area">
+                <blockquote class="let repo of repos">
+                    <h4 class="heading">{{repo.name}} <span ><a href="{{repo.live}}">Live Site</a></span></h4>
+                    <p>{{repo.description}}</p>
                     <hr>
                 </blockquote>
             </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { AppComponent } from '../app.component';
+import { RepoService } from '../../services/repo.service';
+import { Repo } from '../class/repo'; 
 
 @Component({
   selector: 'app-repos',
@@ -7,21 +9,15 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
-  user:any;
-  repos:any; 
+ repo:Repo;
 
-  constructor(private userService: UserService) {
-    this.userService.getUserData().subscribe(user => {
-        console.log(user);
-        this.user = user;
-    });
-    this.userService.getUserRepo().subscribe(repos => {
-        console.log(repos);
-        this.repos = repos;
-    })
+  constructor(public repoService: RepoService) {
   
   }
-  ngOnInit(): void {
+  
+  
+  ngOnInit() {
+    this.repoService.repoRequest()
+    this.repo=this.repoService.repo
   }
-
 }
