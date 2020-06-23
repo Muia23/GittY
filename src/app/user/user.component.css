@@ -1,24 +1,16 @@
-.search-area {
-    padding-right: 40px;
-}
-.search{
-    margin-right: 3px;
-}
 .user-icon {
     min-width: 450px;
-    border-style: dotted;
-    border-color: blue;
 }
 .icon{
     margin-left: 75px;
     margin-right: 75px;
     border-radius: 50%;
+    height: 400px;
+    width: 400px;
 }
 
 .user-details{
     padding: 30px;
-    border-style: double;
-    border-color: brown;
     text-align: center;
 }
 .user-details h2 {
@@ -32,8 +24,8 @@
 }
 .user-details h5{
     display: inline;
-    padding-left: 30px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .follows-area {
     padding-top: 10px;
@@ -49,19 +41,6 @@
 .bio-area {
     padding-top: 15px;
 }
-
-.bio {
-    float:left;
-}
-.heading{
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 50px;
-}
-.area {
-    padding-left: 50px;
-    padding-right: 80px;
-}
-.icon {
-    border-radius: 50%;
+.num {
+    font-size: 20px;
 }

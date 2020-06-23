@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { AppComponent } from '../app.component';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../class/user';
 
 @Component({
   selector: 'app-user',
@@ -7,22 +10,14 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user:any;
-  repos:any; 
+  user: User;
 
   constructor(private userService: UserService) {
-    this.userService.getUserData().subscribe(user => {
-        console.log(user);
-        this.user = user;
-    });
-    this.userService.getUserRepo().subscribe(repos => {
-        console.log(repos);
-        this.repos = repos;
-    })
-  
+    
   } 
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.userService.userRequest()
+    this.user = this.userService.user
   }
-
 }

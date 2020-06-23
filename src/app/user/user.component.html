@@ -1,55 +1,43 @@
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>GittY</h1>
-        </div>
-        <div class="col-md-4 search-area">
-            <input class="search form-control mr-sm-2" type="text" placeholder="Input Github Username">    
-        </div>
-    </div>
-    <button class="d-inline">Profile</button>
-    <button class="d-inline">Repos</button>
-</div>
-<div *ngIf="user">
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    </head>
+    <body>
+<div *ngIf="user.name">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 user-icon">            
-                <img class="icon" src={{user.avatar_url}}>                                
-                <a href="{{user.html_url}}" target="_blank"><button class="btn btn-success btn-md">View Profile on Github</button></a>
+            <div class="col-md-4 user-icon">            
+                <img class="icon" src="{{user.avatar}}">                                
+                <a href="{{user.email}}" target="_blank"><button class="btn btn-success btn-md">View Profile on Github</button></a>
             </div>
-            <div class="col-md-5 user-details">
+            <div class="col-md-7 user-details">
                 <div class="names">
                     <h2>{{user.name}}</h2>
-                    <h3>{{user.login}}</h3>
+                    <h3>{{user.username}}</h3>
                 </div>
                 <h4>{{user.email}}</h4>
                 <div class="follows-area">
-                    <h5>Followers: <span>{{user.followers}}</span></h5>
-                    <h5>Following: <span>{{user.following}}</span></h5>                    
+                    <h5><span class="num">{{user.followers}}</span> FOLLOWERS </h5>
+                    <h5>FOLLOWING <span class="num">{{user.following}}</span></h5>                    
                 </div>
                 <div class="repos-area">
-                    <h5>Public Repos: <span>{{user.public_repos}}</span></h5>   
-                    <h5>Public Gists: <span>{{user.public_gists}}</span></h5>
+                    <h5><span class="num">{{user.repos}}</span> PUBLIC REPOS </h5>   
+                    <h5 *ngIf="user.gists">PUBLIC GISTS <span class="num">{{user.gists}}</span></h5>
                 </div>
                 <div class="bio-area">
-                    <p class="bio">Bio:</p>
-                    <textarea rows="3" style="width: 25em;"readonly>{{user.bio}}</textarea>
+                    <p>Bio:
+                        <textarea rows="3" style="width: 25em;"readonly>{{user.bio}}</textarea>
+                    </p>
                 </div>    
             </div>
         </div>
     </div>
 </div>
-<hr>
-<div class="container ">
-    <div class="heading">
-        <h1>Repositories<span class="icon btn-success">{{user.public_repos}}</span> </h1>
-        <hr>
-    </div>
-    <div class="area" *ngFor = "let repo of repos">
-        <blockquote  class="repo">
-            <h5>{{repo.name}} <span *ngIf="repo.homepage"><a href="{{repo.homepage}}">Live Site</a></span></h5>
-            <p>{{repo.description}}<span><a href="{{repo.html_url}}">View page here </a></span></p>
-            <hr>
-        </blockquote>
-    </div>
-</div>
+<script type="text/javascript">
+    $(".num").counterUp({delay:30,time:1000});
+</script>
+</body>
+</html>
